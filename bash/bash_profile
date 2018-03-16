@@ -1,8 +1,6 @@
 # File Location: ~/.bash_profile
 # Run the following to download and initialize:
-# curl -o ~/.bash_profile https://raw.githubusercontent.com/mindovermiles262/bash/master/bash_profile && source ~/.bash_profile
-
-source ~/.profile
+# curl -o ~/.bash_profile https://raw.githubusercontent.com/mindovermiles262/dots/master/bash/bash_profile
 
 if [[ "$OSTYPE" == 'linux'* ]]; then
   printf "Hello Linux\n"
@@ -37,17 +35,15 @@ elif [[ "$OSTYPE" == "darwin17" ]]; then
   if [ -f '/usr/local/bin/google-cloud-sdk/completion.bash.inc' ]; then source '/usr/local/bin/google-cloud-sdk/completion.bash.inc'; fi
 fi
 
+
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Change Default Text Editor
-# export EDITOR='subl -w'
 
 # Git branch in terminal.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-
 
 # File Aliases
 alias ll="ls -lha"
@@ -71,13 +67,13 @@ alias c="code ."
 # Download VIM-Plug and initialize in ~/.vim/autoload, then download .vimrc
 alias vim-init="printf 'Downloading Plug\n' \
   && curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
-  && curl -o ~/.vimrc https://raw.githubusercontent.com/mindovermiles262/vim/master/vimrc"
+  && curl -o ~/.vimrc https://raw.githubusercontent.com/mindovermiles262/dots/master/vim/vimrc"
 
 # Download and update program profiles
 alias vim-update="printf 'Updating .vimrc file:\n' \
-  && curl -o ~/.vimrc https://raw.githubusercontent.com/mindovermiles262/vim/master/vimrc"
+  && curl -o ~/.vimrc https://raw.githubusercontent.com/mindovermiles262/dots/master/vim/vimrc"
   
-alias bash-update="curl -o ~/.bash_profile https://raw.githubusercontent.com/mindovermiles262/bash/master/bash_profile \
+alias bash-update="curl -o ~/.bash_profile https://raw.githubusercontent.com/mindovermiles262/dots/master/bash/bash_profile \
   && source ~/.bash_profile \
   && clear \
   && printf 'Updated .bash_profile from Github\n'"
