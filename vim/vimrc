@@ -1,0 +1,51 @@
+" File Location: ~/
+" File Name: .vimrc
+
+syntax on
+
+" Vim-Plug Plugin Manager.
+" Set up with following Script:
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" Add 'Plug '<github_user/repo_name'
+" then :PlugInstall to install plugins
+
+call plug#begin('~/.vim/extensions')
+Plug 'spf13/vim-autoclose'
+Plug 'tpope/vim-endwise'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'mattn/emmet-vim'
+Plug 'wakatime/vim-wakatime'
+call plug#end()
+
+set autoindent
+set relativenumber number
+set ruler
+set showcmd
+set showmode
+set backspace=indent,eol,start
+
+" Set TAB to 2 Spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set smarttab
+
+" Map copy/paste to use xclip across networks
+" https://defuse.ca/blog/clipboard-over-ssh-with-vim.html
+vmap "+y :!xclip -f -sel clip
+map "+p :r!xclip -o -sel clip
+
+" Start NERDTree when 'vim' is called
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Map <tab> to expand Emmet
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+:imap jj <Esc>
+:command Tree NERDTreeToggle
