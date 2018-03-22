@@ -38,12 +38,6 @@ set softtabstop=2
 set expandtab
 set smarttab
 
-" Configure FZF to use CTRL-P bindings
-let g:fzf_action = {
-      \ 'ctrl-s': 'split',
-      \ 'ctrl-v': 'vsplit'
-      \ }
-nnoremap <c-p> :FZF<cr>
 " Map copy/paste to use xclip across networks
 " https://defuse.ca/blog/clipboard-over-ssh-with-vim.html
 vmap "+y :!xclip -f -sel clip
@@ -52,9 +46,16 @@ map "+p :r!xclip -o -sel clip
 " Start NERDTree when 'vim' is called
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+:command Tree NERDTreeToggle
 
 " Map <tab> to expand Emmet
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
+" Configure FZF to use CTRL-P bindings
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+nnoremap <c-p> :FZF<cr>
+
 :imap jj <Esc>
-:command Tree NERDTreeToggle
