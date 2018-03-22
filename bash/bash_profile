@@ -87,5 +87,7 @@ alias lk="ssh osmc@192.168.50.5"
 alias cip="curl https://andyduss.com/ip"
 
 # Add rbenv to PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
