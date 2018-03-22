@@ -30,6 +30,7 @@ set ruler
 set showcmd
 set showmode
 set backspace=indent,eol,start
+set autochdir
 
 " Set TAB to 2 Spaces
 set tabstop=2
