@@ -3,7 +3,6 @@
 # curl -o ~/.bash_profile https://raw.githubusercontent.com/mindovermiles262/dots/master/bash/bash_profile && source ~/.bash_profile
 
 if [[ "$OSTYPE" == 'linux'* ]]; then
-  printf "Hello Linux\n"
   alias linux-upgrade="sudo apt-get update \
     && sudo apt-get -y upgrade \
     && sudo apt-get -y dist-upgrade \
@@ -15,7 +14,7 @@ if [[ "$OSTYPE" == 'linux'* ]]; then
   export MAIL=/home/student/email
   
   # add color to Terminal
-  export PS1="\e[46;1;37m\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+  export PS1="\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
   
 elif [[ "$OSTYPE" == "darwin17" ]]; then
   printf "Hello Mac\n"
@@ -34,7 +33,6 @@ elif [[ "$OSTYPE" == "darwin17" ]]; then
   # The next line enables shell command completion for gcloud.
   if [ -f '/usr/local/bin/google-cloud-sdk/completion.bash.inc' ]; then source '/usr/local/bin/google-cloud-sdk/completion.bash.inc'; fi
 fi
-
 
 
 # Load RVM into a shell session *as a function*
@@ -63,6 +61,10 @@ alias seed="rails db:seed"
 alias v="vim"
 alias sv="sudo vim"
 alias c="code ."
+
+# Editing Bash Profile
+alias vbash="vim ~/.bash_profile"
+alias sbash="source ~/.bash_profile
 
 # Download VIM-Plug and initialize in ~/.vim/autoload, then download .vimrc
 alias vim-init="printf 'Downloading Plug\n' \
