@@ -17,8 +17,6 @@ if [[ "$OSTYPE" == 'linux'* ]]; then
   export PS1="\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
   
 elif [[ "$OSTYPE" == "darwin17" ]]; then
-  printf "Hello Mac\n"
-  
   # Add color to OSX Terminal
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -27,10 +25,9 @@ elif [[ "$OSTYPE" == "darwin17" ]]; then
   # Add Python3 to PATH
   export PATH=~/Library/Python/3.6/bin:$PATH
   
-  # The next line updates PATH for the Google Cloud SDK.
+  # Add Google Cloud SDK to PATH
   if [ -f '/usr/local/bin/google-cloud-sdk/path.bash.inc' ]; then source '/usr/local/bin/google-cloud-sdk/path.bash.inc'; fi
-
-  # The next line enables shell command completion for gcloud.
+  # Enable shell command completion for gcloud.
   if [ -f '/usr/local/bin/google-cloud-sdk/completion.bash.inc' ]; then source '/usr/local/bin/google-cloud-sdk/completion.bash.inc'; fi
 fi
 
@@ -48,10 +45,6 @@ alias ll="ls -lha"
 alias la="ls -lha"
 alias l="ls -lh"
 
-# Add Python Aliases
-alias pip="pip3"
-alias py="python3"
-
 # Add Rails Aliases
 alias reset="rails db:migrate:reset; rails db:seed"
 alias migrate="rails db:migrate"
@@ -64,7 +57,7 @@ alias c="code ."
 
 # Editing Bash Profile
 alias vbash="vim ~/.bash_profile"
-alias sbash="source ~/.bash_profile
+alias sbash="source ~/.bash_profile"
 
 # Download VIM-Plug and initialize in ~/.vim/autoload, then download .vimrc
 alias vim-init="printf 'Downloading Plug\n' \
