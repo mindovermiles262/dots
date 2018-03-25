@@ -2,6 +2,9 @@
 # Run the following to download and initialize:
 # curl -o ~/.bash_profile https://raw.githubusercontent.com/mindovermiles262/dots/master/bash/bash_profile && source ~/.bash_profile
 
+# Load settings from .bashrc
+[[ -r ~/.bashrc ]] && . ~/.bashrc
+
 if [[ "$OSTYPE" == 'linux'* ]]; then
   alias linux-upgrade="sudo apt-get update \
     && sudo apt-get -y upgrade \
@@ -25,9 +28,6 @@ elif [[ "$OSTYPE" == "darwin17" ]]; then
   # export LSCOLORS=GxFxCxDxBxegedabagaced
   export PS1="\e[40;1m\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 fi
-
-# Load settings from .bashrc
-[[ -r ~/.bashrc ]] && . ~/.bashrc
 
 # Git branch in terminal.
 parse_git_branch() {
