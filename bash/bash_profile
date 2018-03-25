@@ -8,10 +8,6 @@ if [[ "$OSTYPE" == 'linux'* ]]; then
     && sudo apt-get -y dist-upgrade \
     && printf '\n\n' \
     && printf 'Linux Has Been Updated\n  {apt-get update}\n  {apt-get upgrade}\n  {apt-get dist-upgrade}\n'"
-    
-  # add email command to open inbox
-  # alias email="mail -f /home/student/email/"
-  # export MAIL=/home/student/email
   
   # add color to Terminal
   export PS1="\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
@@ -21,21 +17,10 @@ elif [[ "$OSTYPE" == "darwin17" ]]; then
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
   export PS1="\e[40;1m\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-  
-  # Add Python3 to PATH
-  # export PATH=~/Library/Python/3.6/bin:$PATH
-  
-  # Add Google Cloud SDK to PATH
-  #if [ -f '/usr/local/bin/google-cloud-sdk/path.bash.inc' ]; then source '/usr/local/bin/google-cloud-sdk/path.bash.inc'; fi
-  # Enable shell command completion for gcloud.
-  # if [ -f '/usr/local/bin/google-cloud-sdk/completion.bash.inc' ]; then source '/usr/local/bin/google-cloud-sdk/completion.bash.inc'; fi
 fi
 
-# Load settins from .bashrc
+# Load settings from .bashrc
 [[ -r ~/.bashrc ]] && . ~/.bashrc
-
-# Load RVM into a shell session *as a function*
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Git branch in terminal.
 parse_git_branch() {
@@ -75,13 +60,16 @@ alias bash-update="curl -o ~/.bash_profile https://raw.githubusercontent.com/min
   && clear \
   && printf 'Updated .bash_profile from Github\n'"
 
-# SSH into servers
-alias server="ssh student@207.246.64.67"
-alias kodi="ssh osmc@73.189.217.34"
-alias lk="ssh osmc@192.168.50.5"
-
 # Get current IP address
 alias cip="curl https://andyduss.com/ip"
+
+
+
+### - - - TO BE DELETED - - - ###
+# Should be added to .bashrc instead
+
+# Load RVM into a shell session *as a function*
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Add rbenv to PATH
 # if [ -d "$HOME/.rbenv" ]; then
