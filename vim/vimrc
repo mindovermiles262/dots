@@ -12,6 +12,7 @@ syntax on
 call plug#begin('~/.vim/extensions')
 Plug 'spf13/vim-autoclose'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
