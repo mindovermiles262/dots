@@ -13,7 +13,7 @@ if [[ "$OSTYPE" == 'linux'* ]]; then
     && printf 'Linux Has Been Updated\n  {apt-get update}\n  {apt-get upgrade}\n  {apt-get dist-upgrade}\n'"
   
   # Add color to Terminal:
-  export PS1="\e[44;30m\W\e[40;32m\$(parse_git_branch)\e[00m $ "
+  export PS1="\e[44;1m \W \e[40;32m\$(parse_git_branch)\e[00m $ "
     # \e[44;30m              => Color definition
     # \W                     => Prints CWD
     # \e[40;32m              => Color definition
