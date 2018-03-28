@@ -2,7 +2,7 @@
 # Run the following to download and initialize:
 # curl -o ~/.bash_profile https://raw.githubusercontent.com/mindovermiles262/dots/master/bash/bash_profile && source ~/.bash_profile
 
-# ADDITION TESTING WEBHOOK
+# ADDITION TESTING
 
 # Load settings from .bashrc
 [[ -r ~/.bashrc ]] && . ~/.bashrc
