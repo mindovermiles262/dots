@@ -1,4 +1,5 @@
 # File Location: ~/.bash_profile
+
 # Run the following to download and initialize:
 # curl -o ~/.bash_profile https://raw.githubusercontent.com/mindovermiles262/dots/master/bash/bash_profile && source ~/.bash_profile
 
