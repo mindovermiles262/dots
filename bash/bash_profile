@@ -11,6 +11,8 @@ if [[ "$OSTYPE" == 'linux'* ]]; then
     && sudo apt-get -y dist-upgrade \
     && printf '\n\n' \
     && printf 'Linux Has Been Updated\n  {apt-get update}\n  {apt-get upgrade}\n  {apt-get dist-upgrade}\n'"
+    
+  alias open="xdg-open ."
   
   # Add color to Terminal:
   export PS1="\e[44;1;37m \W \e[40;32m\$(parse_git_branch)\e[00m $ "
