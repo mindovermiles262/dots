@@ -21,7 +21,7 @@ call plug#begin('~/.vim/extensions')
       Plug 'tpope/vim-fugitive'
       Plug 'mattn/emmet-vim'
       Plug 'wakatime/vim-wakatime'
-      Plug 'vim-syntastic/syntastic'
+      " Plug 'vim-syntastic/syntastic'
       Plug 'pangloss/vim-javascript'
       Plug 'w0rp/ale'
 call plug#end()
