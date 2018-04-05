@@ -10,19 +10,20 @@ syntax on
 " then :PlugInstall to install plugins
 
 call plug#begin('~/.vim/extensions')
-Plug 'spf13/vim-autoclose'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'mattn/emmet-vim'
-Plug 'wakatime/vim-wakatime'
-Plug 'vim-syntastic/syntastic'
-Plug 'pangloss/vim-javascript'
+      Plug 'spf13/vim-autoclose'
+      Plug 'tpope/vim-endwise'
+      Plug 'tpope/vim-surround'
+      Plug 'scrooloose/nerdtree'
+      Plug 'Xuyuanp/nerdtree-git-plugin'
+      Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+      Plug 'junegunn/fzf.vim'
+      Plug 'tpope/vim-commentary'
+      Plug 'tpope/vim-fugitive'
+      Plug 'mattn/emmet-vim'
+      Plug 'wakatime/vim-wakatime'
+      Plug 'vim-syntastic/syntastic'
+      Plug 'pangloss/vim-javascript'
+      Plug 'w0rp/ale'
 call plug#end()
 
 set autoindent
@@ -33,6 +34,7 @@ set showmode
 set backspace=indent,eol,start
 set autochdir
 set nowrap
+:imap jj <Esc>
 
 " Set TAB to 2 Spaces
 set tabstop=2
@@ -61,4 +63,9 @@ let g:fzf_action = {
       \ }
 nnoremap <c-p> :FZF<cr>
 
-:imap jj <Esc>
+" Configure ALE
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+
+let g:ale_fix_on_save = 1
