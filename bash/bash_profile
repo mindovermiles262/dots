@@ -28,7 +28,7 @@ elif [[ "$OSTYPE" == "darwin17" ]]; then
   # Add color to OSX Terminal
   export CLICOLOR=1
   # export LSCOLORS=GxFxCxDxBxegedabagaced
-  export PS1="\e[44;30m\W \e[40;32m\$(parse_git_branch)\e[00m $ "
+  export PS1="\W \e[40;32m\$(parse_git_branch)\e[00m$ "
 fi
 
 # Git branch in terminal.
