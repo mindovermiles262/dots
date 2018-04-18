@@ -15,13 +15,13 @@ if [[ "$OSTYPE" == 'linux'* ]]; then
   alias open="xdg-open ."
   
   # Add color to Terminal:
-  export PS1="\e[44;1;37m \W \e[40;32m\$(parse_git_branch)\e[00m $ "
-    # \e[44;30m              => Color definition
-    # \W                     => Prints CWD
-    # \e[40;32m              => Color definition
-    # \$(parse_git_branch)   => Includes git branch
-    # \e[00m                 => Default Color
-    # $                      => Prompt Character
+  export PS1="\e[1;31m\W\e[32m\$(parse_git_branch)\e[00m $ "
+  # \e[44;30m              => Color definition
+  # \W                     => Prints CWD
+  # \e[40;32m              => Color definition
+  # \$(parse_git_branch)   => Includes git branch
+  # \e[00m                 => Default Color
+  # $                      => Prompt Character
 
   
 elif [[ "$OSTYPE" == "darwin17" ]]; then
