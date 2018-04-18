@@ -73,15 +73,11 @@ alias bash-update="curl -o ~/.bash_profile https://raw.githubusercontent.com/min
 alias cip="curl https://andyduss.com/ip"
 
 
-
-### - - - REFERENCE SCRIPTS - - - ###
-# Should be added to .bashrc instead
-
 # Load RVM into a shell session *as a function*
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Add rbenv to PATH
-# if [ -d "$HOME/.rbenv" ]; then
-#   export PATH="$HOME/.rbenv/bin:$PATH"
-#   eval "$(rbenv init -)"
-# fi
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
