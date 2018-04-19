@@ -13,6 +13,7 @@ call plug#begin('~/.vim/extensions')
       Plug 'spf13/vim-autoclose'
       Plug 'tpope/vim-endwise'
       Plug 'tpope/vim-surround'
+      Plug 'tpope/vim-rails'
       Plug 'scrooloose/nerdtree'
       Plug 'Xuyuanp/nerdtree-git-plugin'
       Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
