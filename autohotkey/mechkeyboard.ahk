@@ -12,10 +12,10 @@ Return
 
 F8::
 	Send {Media_Next}
-Returna
+Return
 
 F10::
-	Send {Volume_Up}
+	Send {Volume_Mute}
 Return
 
 F11::
@@ -23,14 +23,5 @@ F11::
 Return
 
 F12::
-	Send {Volume_Mute}
-Return
-
-F1::
-	Send, {LWinDOWN}{Tab}
-	SetTimer, Send_LWinUP, 500
-Return
-
-Send_LWinUp:
-	Send {LWinUp}
+	Send {Volume_Up}
 Return
