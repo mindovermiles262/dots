@@ -1,6 +1,7 @@
 ###########################
 # xbindkeys configuration #
-# Copy to ~/.xbindkeysrc
+# Copy to ~/.xbindkeysrc then
+# run 'xbindkeys' to load
 ###########################
 
 # Examples of commands:
@@ -22,11 +23,11 @@
 
 # Move One Desktop Right
 "xdotool set_desktop $(expr $(expr $(xdotool get_desktop) + 1) % $(xdotool get_num_desktops))"
-  b:8
+  b:9
 
 # Move One Desktop Left 
 "xdotool set_desktop $(expr $(expr $(xdotool get_desktop) + $(expr $(xdotool get_num_desktops) - 1)) % $(xdotool get_num_desktops))"
-  b:9
+  b:8
 
 # Volume Down
 "xdotool key XF86AudioLowerVolume"
