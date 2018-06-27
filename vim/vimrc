@@ -24,7 +24,7 @@ call plug#begin('~/.vim/extensions')
       " Plug 'wakatime/vim-wakatime'
       " Plug 'vim-syntastic/syntastic'
       Plug 'pangloss/vim-javascript'
-      Plug 'w0rp/ale'
+      " Plug 'w0rp/ale'
 call plug#end()
 
 set autoindent
@@ -33,7 +33,8 @@ set ruler
 set showcmd
 set showmode
 set backspace=indent,eol,start
-set autochdir
+" Turn off autochdir so FZF doesn't get stuck in child DIR
+" set autochdir
 set nowrap
 :imap jj <Esc>
 
@@ -46,8 +47,8 @@ set smarttab
 
 " Map copy/paste to use xclip across networks
 " https://defuse.ca/blog/clipboard-over-ssh-with-vim.html
-vmap "+y :!xclip -f -sel clip
-map "+p :r!xclip -o -sel clip
+" vmap "+y :!xclip -f -sel clip
+" map "+p :r!xclip -o -sel clip
 
 " Start NERDTree when 'vim' is called
 autocmd StdinReadPre * let s:std_in=1
@@ -65,8 +66,8 @@ let g:fzf_action = {
 nnoremap <c-p> :FZF<cr>
 
 " Configure ALE
-let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\}
+" let g:ale_fixers = {
+" \   'javascript': ['eslint'],
+" \}
 
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
