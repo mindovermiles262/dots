@@ -14,17 +14,13 @@ call plug#begin('~/.vim/extensions')
       Plug 'tpope/vim-endwise'
       Plug 'tpope/vim-surround'
       Plug 'tpope/vim-rails'
-      Plug 'scrooloose/nerdtree'
       Plug 'Xuyuanp/nerdtree-git-plugin'
       Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
       Plug 'junegunn/fzf.vim'
       Plug 'tpope/vim-commentary'
       Plug 'tpope/vim-fugitive'
       Plug 'mattn/emmet-vim'
-      " Plug 'wakatime/vim-wakatime'
-      " Plug 'vim-syntastic/syntastic'
       Plug 'pangloss/vim-javascript'
-      " Plug 'w0rp/ale'
 call plug#end()
 
 set autoindent
@@ -51,9 +47,9 @@ set smarttab
 " map "+p :r!xclip -o -sel clip
 
 " Start NERDTree when 'vim' is called
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-:command Tree NERDTreeToggle
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" :command Tree NERDTreeToggle
 
 " Map <tab> to expand Emmet
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
@@ -64,10 +60,3 @@ let g:fzf_action = {
       \ 'ctrl-v': 'vsplit'
       \ }
 nnoremap <c-p> :FZF<cr>
-
-" Configure ALE
-" let g:ale_fixers = {
-" \   'javascript': ['eslint'],
-" \}
-
-" let g:ale_fix_on_save = 1
